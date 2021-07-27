@@ -22,7 +22,7 @@ namespace War
             Console.WriteLine("Name Your Opponents Army: ");
             player2 = Console.ReadLine();
             Console.WriteLine("The WAR starts Now");
-            while (/*!exit &&*/ deck1.Count > 0 && deck2.Count > 0)
+            while (!exit && deck1.Count > 0 && deck2.Count > 0)
             {
                 Console.WriteLine($"{player1} Card: " + deck1[0]);
                 Console.WriteLine($"{player2} Card: " + deck2[0]);
@@ -61,7 +61,7 @@ namespace War
                     deck2 = postWarDecks[1];
                 }
                 Console.WriteLine("Play next battle? (Type Y for yes)");
-                //playNext = Console.ReadLine();
+                playNext = Console.ReadLine();
                 if (playNext.ToUpper() != "Y")
                     exit = true;
             }
